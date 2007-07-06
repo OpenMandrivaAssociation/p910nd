@@ -1,7 +1,7 @@
 Summary:	Tiny non-spooling printer daemon.
 Name:		p910nd
-Version:	0.7
-Release:	%mkrel 3
+Version:	0.9
+Release:	%mkrel 1
 License:	GPL
 Group:		System/Servers
 URL:		http://etherboot.sourceforge.net/p910nd
@@ -55,5 +55,3 @@ install -m644 %{name}.8 %{buildroot}%{_mandir}/man8/
 %attr(0644,root,root) %{_mandir}/man8/%{name}.8*
 %attr(0755,root,root) %{_datadir}/%{name}/*.pl
 %attr(0755,root,root) %{_sbindir}/%{name}
-
-
