@@ -1,4 +1,4 @@
-Summary:	Tiny non-spooling printer daemon.
+Summary:	Tiny non-spooling printer daemon
 Name:		p910nd
 Version:	0.9
 Release:	%mkrel 1
