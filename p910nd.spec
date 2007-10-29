@@ -1,11 +1,11 @@
 Summary:	Tiny non-spooling printer daemon
 Name:		p910nd
-Version:	0.9
+Version:	0.91
 Release:	%mkrel 1
 License:	GPL
 Group:		System/Servers
 URL:		http://etherboot.sourceforge.net/p910nd
-Source0:	%{name}-%{version}.tar.bz2
+Source0:	http://etherboot.sourceforge.net/p910nd/%{name}-%{version}.tar.bz2
 Source1:	%{name}.init
 PreReq:		rpm-helper
 Requires:	tcp_wrappers
