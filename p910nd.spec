@@ -7,7 +7,7 @@ Group:		System/Servers
 URL:		http://etherboot.sourceforge.net/p910nd
 Source0:	http://etherboot.sourceforge.net/p910nd/%{name}-%{version}.tar.bz2
 Source1:	%{name}.init
-PreReq:		rpm-helper
+Requires(pre,post):		rpm-helper
 Requires:	tcp_wrappers
 BuildRequires:	tcp_wrappers-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
