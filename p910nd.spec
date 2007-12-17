@@ -10,7 +10,6 @@ Source1:	%{name}.init
 Requires(pre,post):		rpm-helper
 Requires:	tcp_wrappers
 BuildRequires:	tcp_wrappers-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 Tiny non-spooling printer daemon for Linux hosts. Accepts data
