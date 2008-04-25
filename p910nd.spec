@@ -1,6 +1,6 @@
 Summary:	Tiny non-spooling printer daemon
 Name:		p910nd
-Version:	0.91
+Version:	0.92
 Release:	%mkrel 1
 License:	GPL
 Group:		System/Servers
