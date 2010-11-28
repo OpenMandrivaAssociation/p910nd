@@ -18,14 +18,13 @@ over a TCP network connection from a spooling host. Useful on
 diskless X terminals with local printer.
 
 %prep
-
 %setup -q
 
 cp %{SOURCE1} %{name}.init
 
 %build
 
-gcc %{optflags} -DUSE_LIBWRAP -o p910nd p910nd.c -lwrap
+gcc %{optflags} %{ldflags} -DUSE_LIBWRAP -o p910nd p910nd.c -lwrap
 
 %install
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
