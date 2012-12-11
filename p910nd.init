@@ -1,0 +1,58 @@
+#!/bin/bash
+#
+# p910nd	This shell script takes care of starting and stopping p910nd.
+#
+# chkconfig: 2345 65 35
+# description: p910nd -  printer daemon \
+# This shell script takes care of starting and stopping \
+# p910nd (port 9100+n printer daemon) This script only \
+# controls the one on port 9101. You can start others if \
+# you wish.
+# probe: false
+# processname: p910nd
+# pidfile: /var/run/p9100.pid
+# pidfile: /var/run/p9101.pid
+# pidfile: /var/run/p9102.pid
+
+# Source function library.
+. /etc/rc.d/init.d/functions
+
+# Source networking configuration.
+. /etc/sysconfig/network
+
+# Check that networking is up.
+[ "${NETWORKING}" = "no" ] && exit 0
+
+[ -f /usr/sbin/p910nd ] || exit 0
+
+# See how we were called.
+case "$1" in
+start)
+	echo -n "Starting p910nd: "
+	# default port is 1 so it will appear as p9101d on a ps
+	daemon p910nd
+	echo
+	touch /var/lock/subsys/p910nd
+	;;
+stop)
+	echo -n "Stopping p910nd: "
+	killproc p910nd
+	echo
+	rm -f /var/lock/subsys/p910nd
+	;;
+status)
+	status p910nd
+	;;
+restart|reload)
+	$0 stop
+	$0 start
+	;;
+condrestart)
+	[ -f /var/lock/subsys/p910nd ] && restart
+	;;
+  *)
+	echo "Usage: p910nd {start|stop|status|restart|condrestart|reload}"
+	exit 1
+esac
+
+exit 0

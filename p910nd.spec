@@ -54,3 +54,52 @@ install -m644 %{name}.8 %{buildroot}%{_mandir}/man8/
 %attr(0644,root,root) %{_mandir}/man8/%{name}.8*
 %attr(0755,root,root) %{_datadir}/%{name}/*.pl
 %attr(0755,root,root) %{_sbindir}/%{name}
+
+
+%changelog
+* Sun Nov 28 2010 Funda Wang <fwang@mandriva.org> 0.93-1mdv2011.0
++ Revision: 602259
+- use ldflas
+- new version 0.93
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - rebuild
+    - rebuild early 2009.0 package (before pixel changes)
+
+* Fri Apr 25 2008 Funda Wang <fwang@mandriva.org> 0.92-1mdv2009.0
++ Revision: 197413
+- New version 0.92
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+
+* Tue Oct 30 2007 Funda Wang <fwang@mandriva.org> 0.91-1mdv2008.1
++ Revision: 103787
+- fix prerequires
+- New version 0.91
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - fix summary-ended-with-dot
+
+* Fri Jul 06 2007 Funda Wang <fwang@mandriva.org> 0.9-1mdv2008.0
++ Revision: 49019
+- New version
+
+
+* Fri Nov 17 2006 Oden Eriksson <oeriksson@mandriva.com> 0.7-3mdv2007.0
++ Revision: 85296
+- Import p910nd
+
+* Fri Nov 17 2006 Oden Eriksson <oeriksson@mandriva.com> 0.7-3mdv2007.1
+- rebuild
+
+* Sat Sep 10 2005 Oden Eriksson <oeriksson@mandriva.com> 0.7-2mdk
+- rebuild
+
+* Sat Aug 21 2004 Oden Eriksson <oeriksson@mandrakesoft.com> 0.7-1mdk
+- 0.7
+- built against dietlibc per default
+
