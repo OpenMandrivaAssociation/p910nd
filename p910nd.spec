@@ -1,7 +1,7 @@
 Summary:	Tiny non-spooling printer daemon
 Name:		p910nd
 Version:	0.93
-Release:	%mkrel 1
+Release:	2
 License:	GPL
 Group:		System/Servers
 URL:		http://etherboot.sourceforge.net/p910nd
