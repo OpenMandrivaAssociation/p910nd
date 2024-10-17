@@ -4,7 +4,7 @@ Version:	0.93
 Release:	2
 License:	GPL
 Group:		System/Servers
-URL:		http://etherboot.sourceforge.net/p910nd
+URL:		https://etherboot.sourceforge.net/p910nd
 Source0:	http://etherboot.sourceforge.net/p910nd/%{name}-%{version}.tar.bz2
 Source1:	%{name}.init
 Requires(pre,post):		rpm-helper
